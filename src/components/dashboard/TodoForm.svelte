@@ -10,7 +10,10 @@
     </div>
   
     <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-      <form class="mt-8 space-y-6" on:submit={add}>
+      <form class="mt-8 space-y-6" on:submit={(e) => {
+        e.preventDefault();
+        add();
+      }}>
         <div>
           <label for="todo-input" class="block text-sm/6 font-medium text-gray-900"></label>
           <div class="mt-2">
